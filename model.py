@@ -3,8 +3,9 @@ import torch.nn.functional as F
 import torch
 
 class sharedNet(nn.Module):
-    def __int__(self):
+    def __init__(self):
         super(sharedNet, self).__init__()
+
         self.net = nn.Sequential(
             nn.Conv2d(1, 64, kernel_size=4, stride=2, padding=1),
             nn.LeakyReLU(0.1, inplace=True),
